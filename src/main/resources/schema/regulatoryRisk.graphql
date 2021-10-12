@@ -1,0 +1,5 @@
+type RegulatoryRisk {
+    id: ID! ,
+    indicator : String,
+    updateDate : String
+}

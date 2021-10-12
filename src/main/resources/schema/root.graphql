@@ -1,0 +1,11 @@
+schema{
+    query : Query
+}
+
+ type Query {
+    getAccount(accountId:ID) : Account
+    getAccountByAccountNumber(
+        accountNumber : String @constraint(pattern: "^[0-9A-Za-z]{1,10}$")
+    ) : Account @fetcher(datafetcher : "getAccount")
+    getCustomer(customerId:Int) : Customer
+}

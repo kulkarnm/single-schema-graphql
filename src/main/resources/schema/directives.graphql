@@ -1,0 +1,11 @@
+directive @constraint (
+    pattern : String
+    min :   Int
+    max :   Int
+    minItems :  Int
+    maxItems : Int
+) on FIELD_DEFINITION | ARGUMENT_DEFINITION
+
+directive @fetcher (
+    datafetcher : String
+) on FIELD_DEFINITION | FIELD

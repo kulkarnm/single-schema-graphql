@@ -1,0 +1,6 @@
+type Account {
+    id: ID! ,
+    accountNumber: String,
+    availableFunds: Int,
+    customer: Customer @fetcher(datafetcher : "Account")
+}

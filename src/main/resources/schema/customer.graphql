@@ -1,0 +1,21 @@
+type Customer {
+    id: ID!,
+    customerNumber: String,
+    name: String,
+    cardHolderAddress: CardHolderAddress
+    regulatoryRisk: RegulatoryRisk @fetcher(datafetcher : "regulatoryRisk")
+}
+
+type CustNumber {
+    customerNumber : String
+}
+
+type CardHolderAddress {
+    addressLine1 : String,
+    addressLine2 : String,
+    area : String ,
+    city :  String ,
+    stateCounty : String ,
+    country : String ,
+    postCode : String
+}
